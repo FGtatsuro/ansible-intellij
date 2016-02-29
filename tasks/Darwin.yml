@@ -1,2 +1,4 @@
 ---
 # tasks file for intellij(On OSX)
+- name: Install IntelliJ IDEA with Homebrew Cask
+  homebrew_cask: name=intellij-idea-ce
