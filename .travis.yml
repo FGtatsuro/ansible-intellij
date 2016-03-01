@@ -7,8 +7,6 @@ matrix:
       env:
         - TARGET=localhost
         - CONNECTION=local
-      before_script:
-        - brew --version
     - os: linux
       dist: trusty
       language: python
