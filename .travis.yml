@@ -23,10 +23,10 @@ script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
   - if [ "${REPOSITORY}" == "default" ]; then ansible-playbook tests/test.yml -i tests/inventory -l ${TARGET} --connection=${CONNECTION} -vvvv; fi
-  - if [ "${REPOSITORY}" == "custom" ]; then ansible-playbook tests/test.yml -i tests/inventory -l ${TARGET} --connection=${CONNECTION} --extra-vars="intellij_homebrew_repository=FGtatsuro/homebrew-custom intellij_homebrew_formula=intellij-idea-ce1504" -vvvv; fi
+  - if [ "${REPOSITORY}" == "custom" ]; then ansible-playbook tests/test.yml -i tests/inventory -l ${TARGET} --connection=${CONNECTION} --extra-vars="intellij_homebrew_repository=FGtatsuro/homebrew-custom intellij_homebrew_formula=intellij-idea-ce15" -vvvv; fi
   - bundle install
   - if [ "${REPOSITORY}" == "default" ]; then bundle exec rake spec SPEC_TARGET=${TARGET}; fi
-  - if [ "${REPOSITORY}" == "custom" ]; then bundle exec rake spec SPEC_TARGET=${TARGET} INTELLIJ_HOMEBREW_FORMULA=intellij-idea-ce1504; fi
+  - if [ "${REPOSITORY}" == "custom" ]; then bundle exec rake spec SPEC_TARGET=${TARGET} INTELLIJ_HOMEBREW_FORMULA=intellij-idea-ce15; fi
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
