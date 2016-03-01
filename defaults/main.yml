@@ -1,2 +1,4 @@
 ---
 # defaults file for intellij
+intellij_homebrew_repository: "caskroom/homebrew-versions"
+intellij_homebrew_formula: "intellij-idea-ce"
