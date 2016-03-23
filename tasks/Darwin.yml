@@ -1,6 +1,6 @@
 ---
 # tasks file for intellij(On OSX)
-- name: test
+- name: Tap Homebrew repository including IntelliJ
   homebrew_tap: tap="{{ intellij_homebrew_repository }}"
 - name: Install IntelliJ IDEA with Homebrew Cask
   homebrew_cask: name="{{ intellij_homebrew_formula }}"
