@@ -1,4 +1,8 @@
 ---
+branches:
+  only:
+  - master
+
 os: osx
 language: generic
 
